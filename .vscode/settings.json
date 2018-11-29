@@ -1,10 +1,18 @@
 {
-    "python.pythonPath": "env/bin/python",
-    "python.linting.pylintEnabled": false,
-    "appService.defaultWebAppToDeploy": "/subscriptions/46ee52f4-b7cf-4b54-979d-12f4df432819/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/django-appservice-deploy",
-    "appService.deploySubpath": "",
-    "python.workspaceSymbols.exclusionPatterns": [
-    ],
-    "azureFunctions.projectLanguage": "Python",
-    "azureFunctions.projectRuntime": "~2"
+  "python.pythonPath": "env/bin/python",
+  "python.linting.pylintEnabled": false,
+  "appService.defaultWebAppToDeploy": "/subscriptions/46ee52f4-b7cf-4b54-979d-12f4df432819/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/django-appservice-deploy",
+  "appService.deploySubpath": "",
+  "python.workspaceSymbols.exclusionPatterns": [],
+  "azureFunctions.projectLanguage": "Python",
+  "azureFunctions.projectRuntime": "~2",
+  "azureFunctions.templateFilter": "Verified",
+  "azureFunctions.deploySubpath": "rest-framework-tutorial.zip",
+  "azureFunctions.preDeployTask": "funcPack",
+  "files.exclude": {
+    "obj": true,
+    "bin": true
+  },
+  "azureFunctions.pythonVenv": "env",
+  "debug.internalConsoleOptions": "neverOpen"
 }

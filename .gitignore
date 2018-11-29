@@ -8,3 +8,7 @@ env
 !.gitignore
 !.travis.yml
 /.env
+
+.python_packages
+__pycache__
+rest-framework-tutorial.zip
