@@ -17,14 +17,15 @@ SETTINGS_KEYS = (
     'AZ_STORAGE_ACCOUNT_NAME',
     'AZ_STORAGE_CONTAINER',
     'AZ_STORAGE_KEY',
+    'FUNCTIONS_MOUNT_POINT',
 )
 settings_pairs = ['{}={}'.format(k, os.getenv(k)) for k in SETTINGS_KEYS]
 
-# https://docs.microsoft.com/en-us/cli/azure/webapp/config/appsettings?view=azure-cli-latest#az-webapp-config-appsettings-set
+# Only diff here with as_settings is `functionapp` for `webapp`.
 settings_command = [
-    'az', 'webapp', 'config', 'appsettings', 'set',
-    '--name', os.getenv('APP_SERVICE_APP_NAME'),
-    '--resource-group', os.getenv('AZ_GROUP'),
+    'az', 'functionapp', 'config', 'appsettings', 'set',
+    '--name', os.getenv('FUNCTIONS_APP_NAME'),
+    '--resource-group', os.getenv('FUNCTIONS_GROUP'),
     '--settings',
 ] + settings_pairs
 
